@@ -11,7 +11,6 @@ class Solution:
                     return 0
             elif dic[s[i]]!=t[i]:
                    return 0
-
         return 1
 
             
