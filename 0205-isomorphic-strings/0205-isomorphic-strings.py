@@ -5,11 +5,13 @@ class Solution:
         for i in range(len(s)):
             if s[i] not in dic:
                 dic[s[i]]=t[i]
-                dup.append(t[i])
+                if t[i] not in dup:
+                   dup.append(t[i])
+                else:
+                    return 0
             elif dic[s[i]]!=t[i]:
                    return 0
-        if len(set(dup))!=len(dup):
-            return 0
+
         return 1
 
             
