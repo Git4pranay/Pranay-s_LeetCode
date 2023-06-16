@@ -6,7 +6,6 @@ class Solution:
                 if j==0:
                     break
             else:
-                j=0
-                g+=1
+                j=0;g+=1
         return (g)
         
