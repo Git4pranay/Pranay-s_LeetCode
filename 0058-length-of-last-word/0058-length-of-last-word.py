@@ -2,9 +2,11 @@ class Solution:
     def lengthOfLastWord(self, s):
         j=1;g=0
         for i in range(len(s)-1,-1,-1):
-            if s[i]!=' ':
-                j=0;g+=1
-            if j==0 and s[i]==' ':
+            if s[i]==' ':
+                if j==0:
                     break
-        return g
+            else:
+                j=0
+                g+=1
+        return (g)
         
