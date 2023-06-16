@@ -1,6 +1,7 @@
 class Solution:
     def lengthOfLastWord(self, s):
-        j=1;g=0
+        j=1
+        g=0
         for i in range(len(s)-1,-1,-1):
             if s[i]==' ':
                 if j==0:
