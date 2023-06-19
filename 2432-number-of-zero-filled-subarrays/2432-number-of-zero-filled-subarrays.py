@@ -6,7 +6,7 @@ class Solution:
             if nums[i] == 0 :
                 z += 1
             else:
-                ans += z*(z+1)//2
+                ans += (z*z+z)//2
                 z=0
-        ans+=z*(z+1)//2
+        ans += (z*z+z)//2
         return ans
