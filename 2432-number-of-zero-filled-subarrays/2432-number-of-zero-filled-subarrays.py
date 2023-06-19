@@ -6,6 +6,7 @@ class Solution:
             if nums[i] == 0 :
                 z += 1
             else:
+                print(z)
                 ans += z*(z+1)//2
                 z=0
         ans+=z*(z+1)//2
