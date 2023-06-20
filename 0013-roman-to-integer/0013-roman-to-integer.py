@@ -16,13 +16,12 @@ class Solution:
             if a<b:
                 ans+=b-a
                 i=i+1
-                print(b-a)
+
             else:
                 ans+=a
-                print(a)
+                
             i+=1
         if i<len(s):
             ans+=dic[s[i]]
-            
-        
+
         return ans
