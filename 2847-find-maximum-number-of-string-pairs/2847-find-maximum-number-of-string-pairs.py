@@ -4,7 +4,6 @@ class Solution:
         dic={}
         for i in words:
             if i[::-1] in dic:
-                  dic[i[::-1]]+=1
                   c+=1
             if i not in dic:
                 dic[i]=0
