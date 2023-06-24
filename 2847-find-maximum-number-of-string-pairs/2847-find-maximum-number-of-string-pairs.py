@@ -8,7 +8,6 @@ class Solution:
                   c+=1
             if i not in dic:
                 dic[i]=0
-        print(dic)
         return c
 
         
