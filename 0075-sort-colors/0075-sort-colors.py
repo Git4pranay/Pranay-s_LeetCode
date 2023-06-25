@@ -10,7 +10,7 @@ class Solution:
                 ones+=1
             else:
                 twos+=1
-        
+    
         ans=[0]*zeroc+[1]*ones+[2]*twos
         for i in range(len(nums)):
             nums[i]=ans[i]
