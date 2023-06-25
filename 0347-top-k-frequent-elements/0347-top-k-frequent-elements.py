@@ -7,7 +7,6 @@ class Solution:
                dic[i]=1
             else:
                 dic[i]+=1
-        print(dic)
         m=max(dic.values())
         d = [[] for i in range(m+1)]
         for i in dic:
