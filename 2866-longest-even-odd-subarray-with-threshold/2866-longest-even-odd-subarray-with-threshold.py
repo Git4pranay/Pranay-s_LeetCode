@@ -5,19 +5,22 @@ class Solution:
         M=0
         m=0
         while (i<len(nums)):
-            if nums[i]%2==0 and prev==0 and nums[i]<=threshold:
+            a=nums[i]%2
+            if nums[i]>threshold:
+                m=0
+                prev=0
+            elif not(a) and prev==0:
                 prev=1
                 m+=1
-            elif prev==1 and nums[i]%2==1 and nums[i]<=threshold:
+            elif prev==1 and a:
                 m+=1
                 prev=0
-            else:
+            elif not(a):
+                m=1
+                prev=1
+            elif a:
                 m=0
-                if nums[i]%2==0 and nums[i]<=threshold: 
-                    m+=1
-                    prev=1
-                else:
-                    prev=0
+                prev=0
             M=max(M,m)
             i+=1
         return M
