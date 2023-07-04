@@ -1,6 +1,6 @@
 class Solution:
     def twoSum(self, nums, target) :
-        dic = {}
+        dic ={}
         for i in range(len(nums)):
             x = target - nums[i]
             if x in dic:
