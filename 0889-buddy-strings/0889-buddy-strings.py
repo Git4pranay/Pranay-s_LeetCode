@@ -11,8 +11,6 @@ class Solution:
                 return 1
             elif len(set(a))==len(a):
                 return 0
-                
-            
         dic={}
         l1=[]
         l2=[]
