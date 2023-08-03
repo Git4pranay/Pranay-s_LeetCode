@@ -9,6 +9,7 @@ class Solution:
         dic['7']='pqrs'
         dic['8']='tuv'
         dic['9']='wxyz'
+        
         return list(map("".join,product(*(dic[i] for i in digits)))) if digits else []        
 
                 
