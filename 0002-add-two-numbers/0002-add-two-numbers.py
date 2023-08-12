@@ -50,7 +50,7 @@ class Solution:
                 temp1 = temp1.next
             if curcarry:
                temp1.next = ListNode(curcarry)
-        print(curcarry)
+        
 
         return  head
         
