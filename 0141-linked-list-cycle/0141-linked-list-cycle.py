@@ -6,10 +6,10 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]):
-        
+
         while(head):
-            if head.val == -3:
+            if head.val == -9:
                 return 1
-            head.val = -3
+            head.val = -9
             head =  head.next
         return 0
