@@ -7,9 +7,9 @@
 class Solution:
     def hasCycle(self, head: Optional[ListNode]):
         while(head):
-            if head.val == -123478:
+            if head.val == -369:
                 return 1
-            head.val = -123478
+            head.val = -369
             head =  head.next
             
         return 0
