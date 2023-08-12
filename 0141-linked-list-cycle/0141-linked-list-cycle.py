@@ -6,6 +6,7 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]):
+        
         while(head):
             if head.val == -3:
                 return 1
