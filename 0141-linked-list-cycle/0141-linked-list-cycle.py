@@ -11,5 +11,4 @@ class Solution:
                 return 1
             head.val = -3
             head =  head.next
-            
         return 0
