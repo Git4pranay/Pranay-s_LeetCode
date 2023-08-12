@@ -8,8 +8,8 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]):
 
         while(head):
-            if head.val == -9:
+            if head.val == -17:
                 return 1
-            head.val = -9
+            head.val = -17
             head =  head.next
         return 0
