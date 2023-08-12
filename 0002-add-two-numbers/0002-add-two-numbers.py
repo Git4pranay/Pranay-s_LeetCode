@@ -19,19 +19,19 @@ class Solution:
                 d2 = temp2.val
                 temp2=temp2.next
             else: d2=0
-            s = d1+d2
-            s = s+prevcarry
+
+            s = d1+d2+prevcarry
             curcarry = s//10
             s = s%10
-            addr = ListNode(s)
-            ans.next = addr
-            ans = addr
+
+            ans.next = ListNode(s)
+            ans = ans.next
+
             prevcarry = curcarry
-            
+
         if curcarry:
-            addr = ListNode(curcarry)
-            ans.next = addr
-            ans = addr
+            ans.next = ListNode(curcarry)
+            
         head = head.next
         return head
         
