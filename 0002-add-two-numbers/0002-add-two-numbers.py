@@ -5,57 +5,55 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        ans = ListNode(-1)
-        head = ans
+        # ans = ListNode(-1)
+        
         temp1 = l1;temp2 = l2
-        prevcarry=0
-
-        while (temp1 or temp2):
-            if (temp1):
-                d1 = temp1.val
-                temp1=temp1.next
-            else: d1=0
-            if (temp2):
-                d2 = temp2.val
-                temp2=temp2.next
-            else: d2=0
-
+        head = temp1
+        prevcarry = 0
+        while (temp1 and temp2):
+            d1 = temp1.val
+            d2 = temp2.val
             s = d1+d2+prevcarry
             curcarry = s//10
             s = s%10
-
-            ans.next = ListNode(s)
-            ans = ans.next
-
+            temp1.val = s
             prevcarry = curcarry
+            ptemp = temp1
+            temp1 = temp1.next;
+            temp2 = temp2.next
+        if curcarry and not temp1 and not temp2:
+            temp1 = ptemp
+            temp1.next = ListNode(curcarry)
 
-        if curcarry:
-            ans.next = ListNode(curcarry)
-            
-        head = head.next
-        return head
+        elif (temp1):
+         while(temp1):
+            s = temp1.val + prevcarry
+            curcarry = s//10
+            s = s%10
+            temp1.val = s
+            ptemp = temp1
+            prevcarry = curcarry
+            temp1=temp1.next
+         if curcarry:
+           temp1 = ptemp
+           temp1.next = ListNode(curcarry)
+
+        elif (temp2):
+            temp1=ptemp
+            while(temp2):
+                s = temp2.val + prevcarry
+                curcarry = s//10
+                s = s%10
+                temp1.next = ListNode(s)
+                prevcarry = curcarry
+                temp2 = temp2.next
+                temp1 = temp1.next
+            if curcarry:
+               temp1.next = ListNode(curcarry)
+        print(curcarry)
+
+        return  head
         
-            
-                
-            
-            
-
         
         
-        
-#   1 1 1 1 1 1       
-#   9 9 9 9 9 9 9
-#   9 9 9 9 9 9 9
-#   1 9 9 9 9 9 9 8   
-
-
-
-
-
-
-
-
-        
-        
-
         
