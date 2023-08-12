@@ -1,19 +1,25 @@
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        firstRowVal, R, C = 1, len(matrix), len(matrix[0])
+        m = len(matrix)
+        n = len(matrix[0])
 
-        for i in range(R):
-            for j in range(C):
-                if matrix[i][j] == 0:
-                    matrix[0][j] = 0 
-                    if i != 0:       
-                        matrix[i][0] = 0
-                    else:
-                        firstRowVal = 0
+        dicrow = set()
+        diccol = set()
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j]==0:
+                    dicrow.add(i)
+                    diccol.add(j)
         
-        for i in reversed(range(R)):
-            for j in reversed(range(C)):
-                if i == 0:
-                    matrix[i][j] *= firstRowVal
-                elif matrix[0][j] == 0 or matrix[i][0] == 0:
-                    matrix[i][j] = 0
+        for i in range(m):
+            for j in range(n):
+                if i in dicrow or j in diccol: matrix[i][j]=0
+            
+[[1,2,3,4],
+ [5,0,7,8],
+ [0,10,11,12],
+ [13,14,15,0]]
+
+                    
+
+
