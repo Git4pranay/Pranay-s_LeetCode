@@ -8,7 +8,8 @@ class Solution:
         if b==0:
             ans+='z'
             a=a-1
-        ans += l[b-1]
+        else:
+            ans += l[b-1]
         if a>26:
             while(a>26):
                 b = a%26
