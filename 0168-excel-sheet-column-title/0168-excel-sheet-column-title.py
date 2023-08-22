@@ -8,7 +8,6 @@ class Solution:
         if b==0:
             ans+='z'
             a=a-1
-        print(a,b)
         ans += l[b-1]
         if a>26:
             while(a>26):
