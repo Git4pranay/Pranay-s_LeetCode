@@ -16,7 +16,7 @@ class Solution:
                 a = a//26
                 ans+=l[b-1]
         ans+=l[a-1]
-        return ans[::-1].upper().replace(' ','')
+        return ans[::-1].strip(' ').upper()
 
         
         
