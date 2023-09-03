@@ -24,5 +24,4 @@ class Solution:
         if temp1:
             temp.next = temp1
             temp = temp1
-            
         return head.next
